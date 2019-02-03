@@ -18,7 +18,6 @@ body{
 main{
 	background-image: url("bg6.jpg");
 	background-color: #23282B;
-	min-height: calc(100vh - 30px);
 	/*background-repeat: no-repeat;*/
 }
 .hidden:not(:focus):not(:active),
@@ -100,6 +99,7 @@ main{
 	/*background-color:lightgrey;*/
 	padding-bottom: 85px;
 	padding-top: 20px; 
+	min-height: calc(100vh - 30px);
 }
 .foot-container{
 	width:100%;
