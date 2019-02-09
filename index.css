@@ -150,7 +150,8 @@ main{
 }
 .advantages-list-item{
 	width:300px;
-	height: 250px;
+	/*height: 250px;*/
+	margin-bottom: 35px;
 	/*background-color: rgba(255,143,231,0.3);*/
 }
 .advantages-list-item h2{
@@ -510,149 +511,86 @@ main{
 }
 /*pricepricepricepricepricepricepricepricepcircpecripcricrprciepcircppricepicrce*/
 .price-slider{
-	width:960px;
-	height: 700px;
-	/*background-color: rgba(255,23,131,0.3);*/
 	position: relative;
-	border:3px solid black;
 }
-#price-slides {
-    position: relative;
-    height: 694px;
-    width: 954px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-}
- 
-.price-slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
- 
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 0.5s;
-}
- 
-.showing {
-    opacity: 1;
-    z-index: 2;
-}
-.price-slide {
-    font-size: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #000;
-   /* border-radius: 3px;*/
-    margin:0;
+.price-list{
+	width:954px;
+	border: 3px solid black;
+	background-color:#F4F4F4;
+	list-style: none;
 	padding:0;
+	margin:0;
 }
- 
-.price-slide:nth-of-type(1) {
-   /*background-image: url(algem.jpg);
-	background-repeat: no-repeat;*/
-	background-color: #F4F4F4;
-}
-.price-slide:nth-of-type(2) {
-  background-color: #F4F4F4;
-}
-.price-slide:nth-of-type(3) {
-   background-color: #F4F4F4;
-}
-.price-slide:nth-of-type(4) {
-   background-color: #F4F4F4;
-}
-.price-slide a{
+.price-list a{
 	display: block;
-	width: 200px;
-	line-height:30px;
-	background-color:black;
-	color:#ffffff;
+	background-color: black;
+	color: #ffffff;
 	text-decoration: none;
 	font-size: 20px;
 	text-align: center;
 	border-radius: 5px;
-    width: 217px;
-    line-height: 51px;
-    margin-left: 370px;
-    position: absolute;
-    top: 620px;
+	width: 217px;
+	line-height: 51px;
+	margin-bottom:20px;
 }
-/*.slide:nth-child(2) a{
-	margin-top: 190px;
-}*/
-.price-slide:nth-child(4) a{
-	/*color:#000;
-	background-color: #fff;
-	border:1px solid black;*/
+.price-item{
+	display: none;
 }
-.price-slide a:hover{
-	background-color:#191919;
+.show{
+	display: block;
 }
-.controls{
-  display: none;
-}
+.price-wrap{
+	margin:0;
+	padding:0;
+	margin-left:55px;
 
-.controls:hover{
+	/*background-color:red;*/
+}
+.price-h2{
+	font-size:50px;
+	margin:0;
+	padding:0;
+	margin-top:10px;
+}
+.price-discript{
+	display: block;
+	line-height: 25px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	margin-top:20px;
+	width: 855px;
+}
+.price-controls{
   display: none;
 }
-.next{
+.price-next{
 	content: "";
 	width:50px;
 	height: 50px;
 	top: 45%;
     z-index: 100;
-    right: 5%;
+    right: 0%;
     background-image:url(icon-right.svg);
     position: absolute;
     background-repeat: no-repeat;
     cursor: pointer;
 }
-.controls:nth-child(2){
+.price-controls:nth-child(2){
 	top: 80%;
     z-index: 100;
     right: 45%;
 }
-.previous{
+.price-previous{
 	content: "";
 	width:50px;
 	height: 50px;
 	top: 45%;
     z-index: 100;
-    left: 5%;
+    left: 1%;
     background-image:url(icon-left.svg);
     position: absolute;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-/*.price-slide-item-wrap{
-	margin:0;
-	padding:0;
-	width:954px;
-	background-color: rgba(0,0,0,0.2);
-	padding-left: 46px;
-    padding-top: 30px;
-    padding-bottom: 35px;
-}*/
-.price-slide h2{
-	margin:0;
-	padding:0;
-	text-align:center;
-}
-.price-slide span{
-	display: block;
-	margin-left:100px;
-	margin-right:100px;
-	font-size: 18px;
-}
-.price-slide-item-wrap{
-	position: relative;
 }
 /*modalmodalmodalmodalmodalmodalmodalmodalmodalmodalmdoamodal*/
 

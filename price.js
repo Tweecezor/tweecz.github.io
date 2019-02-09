@@ -1,4 +1,4 @@
-		var slides = document.querySelectorAll('#price-slides .price-slide');
+		var slides = document.querySelectorAll('.price-list .price-item');
 		var currentSlide = 0;
 		var slideInterval = setInterval(nextSlide,3000);
 
@@ -11,13 +11,13 @@
 		}
 
 		function goToSlide(n) {
-		 slides[currentSlide].className = 'price-slide';
+		 slides[currentSlide].className = 'price-item';
 		 currentSlide = (n+slides.length)%slides.length;
-		 slides[currentSlide].className = 'price-slide showing';
+		 slides[currentSlide].className = 'price-item show';
 		}
 
 		var playing = true;
-		var pauseButton = document.getElementById('pause');
+		var pauseButton = document.getElementById('price-pause');
 		 
 		function pauseSlideshow() {
 		    pauseButton.innerHTML = '&#9658;';
@@ -28,7 +28,7 @@
 		function playSlideshow() {
 		   pauseButton.innerHTML = '&#10074;&#10074;';
 		    playing = true;
-		    slideInterval = setInterval(nextSlide,2000);
+		    slideInterval = setInterval(nextSlide,3000);
 		}
 		 
 		pauseButton.onclick = function() {
@@ -39,15 +39,19 @@
 		  }
 		};
 
-		var next = document.getElementById('next');
-		var previous = document.getElementById('previous');
+		var next = document.getElementById('price-next');
+		var previous = document.getElementById('price-previous');
 		next.onclick = function() {
 		 // pauseSlideshow();
 		 nextSlide();
+		  clearInterval(slideInterval);
+		   slideInterval = setInterval(nextSlide,3000);
 		};
 		previous.onclick = function() {
 		 // pauseSlideshow();
 		 previousSlide();
+		  clearInterval(slideInterval);
+		   slideInterval = setInterval(nextSlide,3000);
 		};
 
 		 let actmodal = 0;

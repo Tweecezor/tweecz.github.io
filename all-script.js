@@ -28,7 +28,7 @@
 		function playSlideshow() {
 		   pauseButton.innerHTML = '&#10074;&#10074;';
 		    playing = true;
-		    slideInterval = setInterval(nextSlide,2000);
+		    slideInterval = setInterval(nextSlide,3000);
 		}
 		 
 		pauseButton.onclick = function() {
@@ -44,11 +44,17 @@
 		next.onclick = function() {
 		 // pauseSlideshow();
 		 nextSlide();
+		 clearInterval(slideInterval);
+		 slideInterval = setInterval(nextSlide,3000);
 		};
 		previous.onclick = function() {
 		 // pauseSlideshow();
 		 previousSlide();
+		 clearInterval(slideInterval);
+		 slideInterval = setInterval(nextSlide,3000);
 		};
+
+		
 		 let actmodal = 0;
 		function contacts(){
 			var ruleup = document.querySelector(".modal-rules");
